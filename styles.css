@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+}
+
+header {
+  text-align: center;
+  color: red;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
