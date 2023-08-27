@@ -2,19 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
- 
+* {
   box-sizing: border-box;
 }
-span{
+span {
   color: white;
 }
-.loadingSection{
+.loadingSection {
   display: flex;
 }
-.mainContent{
+.mainContent {
   /* display: none; */
 }
-img{
+img {
   cursor: pointer;
 }
