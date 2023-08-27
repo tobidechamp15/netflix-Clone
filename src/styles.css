@@ -14,10 +14,6 @@ span {
   display: flex;
 }
 
-.mainContent {
-  /* display: none; */
-}
-
 img {
   cursor: pointer;
 }
