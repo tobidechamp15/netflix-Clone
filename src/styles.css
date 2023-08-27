@@ -5,15 +5,19 @@
 * {
   box-sizing: border-box;
 }
+
 span {
   color: white;
 }
+
 .loadingSection {
   display: flex;
 }
+
 .mainContent {
   /* display: none; */
 }
+
 img {
   cursor: pointer;
 }
