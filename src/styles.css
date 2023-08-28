@@ -17,3 +17,53 @@ span {
 img {
   cursor: pointer;
 }
+
+.home {
+  background-image: url("/src/assets/home-Image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.nav-items {
+  color: #fff;
+  text-align: center;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: SF Pro Display;
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30.447px; 
+  letter-spacing: 0.762px;
+  cursor: pointer;
+}
+.nav-items:hover {
+  color: rgb(160, 47, 47);
+  transition: 0.5s;
+}
+
+.n-logo {
+  width: 10vw;
+}
+
+.ranks {
+  color: #fff;
+  text-align: center;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: SF Pro Display;
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.041px;
+}
+
+.menu-ham {
+  width: 25px;
+  height: 05px;
+  background-color: white;
+}

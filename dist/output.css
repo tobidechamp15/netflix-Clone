@@ -534,46 +534,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.fixed {
-  position: fixed;
-}
-
-.bottom-0 {
-  bottom: 0px;
+.mt-96 {
+  margin-top: 24rem;
 }
 
 .block {
@@ -584,8 +546,12 @@ video {
   display: flex;
 }
 
-.h-14 {
-  height: 3.5rem;
+.hidden {
+  display: none;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .h-full {
@@ -596,8 +562,16 @@ video {
   height: 100vh;
 }
 
-.w-9\/12 {
-  width: 75%;
+.w-full {
+  width: 100%;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -616,6 +590,10 @@ video {
   justify-content: space-around;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
@@ -625,8 +603,9 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.p-8 {
-  padding: 2rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pt-0 {
@@ -651,4 +630,65 @@ span {
 
 img {
   cursor: pointer;
+}
+
+.home {
+  background-image: url("/src/assets/home-Image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.nav-items {
+  color: #fff;
+  text-align: center;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: SF Pro Display;
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30.447px;
+  letter-spacing: 0.762px;
+  cursor: pointer;
+}
+
+.nav-items:hover {
+  color: rgb(160, 47, 47);
+  transition: 0.5s;
+}
+
+.n-logo {
+  width: 10vw;
+}
+
+.ranks {
+  color: #fff;
+  text-align: center;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: SF Pro Display;
+  font-size: 2vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.041px;
+}
+
+.menu-ham {
+  width: 25px;
+  height: 05px;
+  background-color: white;
+}
+
+@media (min-width: 640px) {
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
 }
