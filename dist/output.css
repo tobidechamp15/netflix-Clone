@@ -568,24 +568,12 @@ video {
   }
 }
 
-.fixed {
-  position: fixed;
-}
-
-.bottom-0 {
-  bottom: 0px;
-}
-
 .block {
   display: block;
 }
 
 .flex {
   display: flex;
-}
-
-.h-14 {
-  height: 3.5rem;
 }
 
 .h-full {
@@ -598,6 +586,10 @@ video {
 
 .w-9\/12 {
   width: 75%;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -625,6 +617,11 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -635,6 +632,22 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -651,4 +664,41 @@ span {
 
 img {
   cursor: pointer;
+}
+
+.home {
+  background-image:url('/src/assets/home-Image.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-items {
+  color: #fff;
+  text-align: center;
+  font-feature-settings:
+    "clig" off,
+    "liga" off;
+  font-family: SF Pro Display;
+  font-size: 4vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30.447px;
+  /* 177.049% */
+  letter-spacing: 0.762px;
+  cursor: pointer;
+}
+
+.n-logo{
+  width: 10vw;
+}
+
+.hover\:text-red-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
 }
