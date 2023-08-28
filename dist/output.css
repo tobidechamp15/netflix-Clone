@@ -636,9 +636,6 @@ img {
   background-image: url("/src/assets/home-Image.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: 415px; */
-  /* width: 100%; */
-  /* background: #000; */
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -653,7 +650,6 @@ img {
   font-style: normal;
   font-weight: 500;
   line-height: 30.447px;
-  /* 177.049% */
   letter-spacing: 0.762px;
   cursor: pointer;
 }
@@ -678,11 +674,10 @@ img {
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
-  /* 145.741% */
   letter-spacing: -0.041px;
 }
 
-.menu-ham{
+.menu-ham {
   width: 25px;
   height: 05px;
   background-color: white;
