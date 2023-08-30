@@ -1,4 +1,4 @@
-const options = {
+ const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
@@ -14,7 +14,7 @@ fetch('https://api.themoviedb.org/3/trending/all/day?language=en-US', options)
     datum.map((item) => {
       const poster = item.poster_path;
       const fullPosterUrl = `https://image.tmdb.org/t/p/original/${poster}`;
-      const movie = `<li class="flex flex-col gap-3 "><img class="posterImg"  src="${fullPosterUrl}"></li>`;
+      const movie = `<li class="flex flex-col gap-3 "><section class="imageContainer"><img class="posterImg"  src="${fullPosterUrl}"></section></li>`;
       document.querySelector('.movies').innerHTML += movie;
       const eachMovie = document.querySelectorAll('.posterImg');
       const oneMovie = [];

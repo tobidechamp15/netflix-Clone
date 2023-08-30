@@ -17,10 +17,12 @@
       href="/dist/output.css" />
   </head>
 
-  <body class="pt-0  bg-black h-screen">
-              <div id="sidebar" class="p-3">
-                <span class="cancel">cancel</span>
-              </div>
+  <body class="pt-0 bg-black h-screen">
+    <div
+      id="sidebar"
+      class="p-3">
+      <span class="cancel">cancel</span>
+    </div>
 
     <!-- <div class="flex justify-center items-center h-full loadingSection">
         <img src="../src/assets/netflixLogo.svg">
@@ -56,7 +58,7 @@
               class="w-6 h-6" />
             <span class="text-sm tracking-tighter text-white">My List</span>
           </div>
-          <div class="flex gap-5 bg-gray-400 rounded p-4 py-2">
+          <div class="flex gap-5 bg-red-400 rounded p-4 py-2">
             <img
               src="/src/assets/playIcon.svg"
               class="w-5" />
@@ -75,15 +77,22 @@
         </section>
       </div>
     </div>
-    <section class="flex flex-col gap-3">
+    <section class="flex flex-col gap-3 ">
       <span
         class="m-5 mb-0 topic text-white text-xl tracking-tighter font-semibold leading-4"
-        >Trending
+        >TV Shows Trending Today
       </span>
 
       <div class="movies flex flex-row w-auto gap-3 p-5 overflow-scroll"></div>
     </section>
-    <section class="mt-5">sss</section>
+    <section>
+      <span
+        class="m-5 mb-0 topic text-white text-xl tracking-tighter font-semibold leading-4"
+        >Top Rated
+      </span>
+      <div class="topRated gap-3 p-5 movies flex flex-row overflow-scroll"></div>
+    </section>
     <script src="script.js"></script>
+    <script src="/src/topRated.js"></script>
   </body>
 </html>
