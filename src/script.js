@@ -11,34 +11,30 @@ fetch('https://api.themoviedb.org/3/trending/all/day?language=en-US', options)
   .then((response) => response.json())
   .then((data) => {
     const datum = data.results;
-    datum.map((item) => {
+    datum.forEach((item) => {
+      const arrayOfId = [];
+
+      const eachMovieId = item.id;
+
+      arrayOfId.push(eachMovieId);
+
       const poster = item.poster_path;
       const fullPosterUrl = `https://image.tmdb.org/t/p/original/${poster}`;
-      const movie = `<li class="flex flex-col gap-3 "><section class="imageContainer"><img class="posterImg"  src="${fullPosterUrl}"></section></li>`;
+      const movie = `<li class="flex flex-col gap-3 "><section  class="imageContainer"><img id=${eachMovieId}  class="posterImg"  src="${fullPosterUrl}"></section></li>`;
       document.querySelector('.movies').innerHTML += movie;
-      const eachMovie = document.querySelectorAll('.posterImg');
-      const oneMovie = [];
-      oneMovie.push(eachMovie);
-      const e = oneMovie[0];
+      const posterImages = document.querySelectorAll('.posterImg');
+      posterImages.forEach((posterImg) => {
+        posterImg.addEventListener('click', () => {
+          const movieId = posterImg.id;
 
-      e.forEach((i) => {
-        i.addEventListener('click', () => {
-          window.location.href = './movieDetails.html';
+          // Fetch and display video content based on movieId
+          const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
+          fetch(movieUrl, options)
+            .then((response) => response.json())
+            .then((data) => data);
         });
       });
 
       return true;
     });
   });
-
-const menuBar = document.querySelector('.ham');
-menuBar.addEventListener('click', () => {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('active');
-});
-
-const cancel = document.querySelector('.cancel');
-cancel.addEventListener('click', () => {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('active');
-});
