@@ -36,11 +36,53 @@
           class="m-3 cancelBtn" />
       </section>
     </div>
+    <div class="movieDetails h w-screen bg-black flex flex-col fixed -top-full">
+      <!--       Movie Details -->
+      <img
+        src="/src/assets/Title-Image.svg"
+        class="selectedBackdrop" />
+      <section class="-mt-16 flex items-center justify-center gap-11 mb-3">
+        <div class="flex flex-col gap-2">
+          <img
+            src="/src/assets/addList.svg"
+            class="w-6 h-6" />
+          <span class="text-sm tracking-wide text-white">My List</span>
+        </div>
+        <div class="flex gap-5 bg-red-400 rounded p-4 py-2">
+          <img
+            src="/src/assets/playIcon.svg"
+            class="w-5" />
+          <span class="text-xl text-black leading-8 not-italic font-semibold"
+            >Play</span
+          >
+        </div>
+        <div class="flex flex-col gap-2">
+          <img
+            src="/src/assets/infoIcon.svg"
+            class="w-6 h-6" />
+          <span class="text-sm leading-5 font-normal tracking-wide">Info</span>
+        </div>
+      </section>
+      <section class="flex flex-col gap-2 bg-red-950 rounded p-3">
+        <span class="sm:text-4xl text-xl text-red-400 titleContainer"
+          >Movie Name</span
+        >
+        <ul class="genre flex gap-3"></ul>
+        <span class="w-full mt-3 flex details font-bold text-gray-600">
+          A young man who is about to embark on his first adventure, finds
+          himself in the middle of an epic journey that will A young man who has
+          been living in the shadows of his father's business, is suddenly drawn
+          into an extraordinary ad A young man who has been living in the
+          shadows of his family for years, is suddenly reunited with his old
+          friend
+        </span>
+      </section>
+    </div>
 
     <!-- <div class="flex justify-center items-center h-full loadingSection">
         <img src="../src/assets/netflixLogo.svg">
     </div>  -->
-    <div class="mainContent  px-0">
+    <div class="mainContent px-0">
       <div class="flex flex-col justify-between home mb-4 items- w-full h-auto">
         <div class="flex justify-between items-center w-full">
           <img
@@ -69,7 +111,7 @@
             <img
               src="/src/assets/addList.svg"
               class="w-6 h-6" />
-            <span class="text-sm tracking-tighter text-white">My List</span>
+            <span class="text-sm tracking-wide text-white">My List</span>
           </div>
           <div class="flex gap-5 bg-red-400 rounded p-4 py-2">
             <img
@@ -83,45 +125,45 @@
             <img
               src="/src/assets/infoIcon.svg"
               class="w-6 h-6" />
-            <span class="text-sm leading-5 font-normal tracking-tighter"
+            <span class="text-sm leading-5 font-normal tracking-wide"
               >Info</span
             >
           </div>
         </section>
       </div>
-    </div>
-    <section class="flex flex-col gap-3">
-      <section class="flex justify-between items-center p-3">
-        <span
-          class="topic text-white text-xl tracking-tighter font-semibold leading-4"
-          >TV Shows Trending Today
-        </span>
-        <span class="cursor-pointer text-red-500">See All</span>
-      </section>
+      <section class="flex flex-col gap-3">
+        <section class="flex justify-between items-center p-3">
+          <span
+            class="topic text-white text-2xl tracking-wide font-semibold leading-4"
+            >TV Shows Trending Today
+          </span>
+          <span class="cursor-pointer text-red-500">See All</span>
+        </section>
 
-      <div class="movies flex flex-row w-auto gap-3 p-5"></div>
-    </section>
-    <section>
-      <section class="flex justify-between items-center p-3">
-        <span
-          class="topic text-white text-xl tracking-tighter font-semibold leading-4"
-          >Top Rated
-        </span>
-        <span class="cursor-pointer text-red-500">See All</span>
+        <div class="movies pe-3 flex flex-row w-auto gap-3 py-2"></div>
       </section>
-      <div class="topRated gap-3 p-5 movies flex flex-row"></div>
-    </section>
-    <section>
-      <section class="flex justify-between items-center p-3">
-        <span
-          class="topic text-white text-xl tracking-tighter font-semibold leading-4"
-          >TV Providers
-        </span>
-        <span class="cursor-pointer text-red-500">See All</span>
+      <section>
+        <section class="flex justify-between items-center p-3">
+          <span
+            class="topic text-white text-2xl tracking-wide font-semibold leading-4"
+            >Top Rated
+          </span>
+          <span class="cursor-pointer text-red-500">See All</span>
+        </section>
+        <div class="topRated gap-3 py-2 movies flex flex-row"></div>
       </section>
-      <div class="tvProviders gap-3 p-5 movies flex flex-row"></div>
-    </section>
-    <div id="video-container">
+      <section>
+        <section class="flex justify-between items-center p-3">
+          <span
+            class="topic text-white text-2xl tracking-wide font-semibold leading-4"
+            >TV Providers
+          </span>
+          <span class="cursor-pointer text-red-500">See All</span>
+        </section>
+        <div class="tvProviders gap-3 py-2 movies flex flex-row"></div>
+      </section>
+      <div id="video-container"></div>
+
       <!-- The video will be embedded here -->
     </div>
     <script src="/src/script.js"></script>
