@@ -20,8 +20,12 @@ function fetchingMovie() {
 
         const poster = item.poster_path;
         const fullPosterUrl = `https://image.tmdb.org/t/p/original/${poster}`;
-        const movie = `<li class="flex flex-col gap-3 "><section  class="imageContainer">
-        <img id=${eachMovieId}  class="posterImg"  src="${fullPosterUrl}"></section></li>`;
+        const movie = `<li class="flex flex-col gap-3 li">
+          <section  class="imageContainer ">
+            <img id=${eachMovieId}  class="posterImg"  src="${fullPosterUrl}">
+          </section>
+          <img src="" class="">
+        </li>`;
         document.querySelector('.movies').innerHTML += movie;
 
         const posterImages = document.querySelectorAll('.posterImg');
@@ -89,6 +93,7 @@ function fetchingMovie() {
 
                 return 0;
               });
+            // error line
           });
         });
 
