@@ -37,10 +37,12 @@ function fetchingMovie() {
                 if (data.backdrop_path !== null) {
                   const backDropImagePath = data.backdrop_path;
                   const backDropImageUrl = `https://image.tmdb.org/t/p/original/${backDropImagePath}`;
-                  const backDropImage = document.querySelector('.selectedBackdrop');
+                  const backDropImage =
+                    document.querySelector('.selectedBackdrop');
                   backDropImage.src = backDropImageUrl;
                   const selectedTitle = data.original_title;
-                  const titleContainer = document.querySelector('.titleContainer');
+                  const titleContainer =
+                    document.querySelector('.titleContainer');
                   titleContainer.textContent = selectedTitle;
                   const overviewContent = data.overview;
                   const details = document.querySelector('.details');
@@ -69,9 +71,24 @@ function fetchingMovie() {
                     movieDetails.classList.remove('easeIn');
                     movieDetails.classList.add('ease-out', 'duration-1000');
                   });
-                } else {
+                } else if (
+                  data.backdrop_path == null ||
+                  data.original_title == null ||
+                  data.overview == null
+                ) {
+                  const mainContent = document.querySelector('.mainContent');
+                  const error = document.querySelector('.cards');
+                  error.classList.remove('-top-full');
+                  error.classList.add('errorPop-up');
+                  mainContent.style.opacity = '20%';
+                  mainContent.addEventListener('click', () => {
+                    error.classList.add('-top-full');
+                    error.classList.remove('errorPop-up');
+                    mainContent.style.opacity = '100%';
+                  });
                   return true;
                 }
+
                 return 0;
               });
           });
