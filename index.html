@@ -36,7 +36,8 @@
           class="m-3 cancelBtn" />
       </section>
     </div>
-    <div class="movieDetails h w-screen bg-black flex flex-col fixed -top-full">
+    <div
+      class="movieDetails h w-screen bg-black flex flex-col fixed -top-full overflow-auto">
       <!--       Movie Details -->
       <img
         src="/src/assets/Title-Image.svg"
@@ -67,7 +68,7 @@
         <span class="sm:text-4xl text-xl text-red-400 titleContainer"
           >Movie Name</span
         >
-        <ul class="genre flex gap-3"></ul>
+        <ul class="genre flex gap-3 flex-wrap text-sm"></ul>
         <span class="w-full mt-3 flex details font-bold text-gray-600">
           A young man who is about to embark on his first adventure, finds
           himself in the middle of an epic journey that will A young man who has
@@ -77,6 +78,26 @@
           friend
         </span>
       </section>
+    </div>
+
+    <!-- Movie Error Details -->
+    <div class="flex w-full -top-full cards">
+      <div class="card">
+        <section class="img flex flex-col items-center justify-center">
+          <img
+            src="/src/assets/exclamation.png"
+            alt="" />
+          <span class="w-full mt-1 text-xl">Click here</span>
+        </section>
+        <div class="card__content">
+          <p class="card__title align-center flex">Error Message</p>
+          <p class="card__description">
+            We're sorry, but information about this movie is currently
+            unavailable. Please check back later or try searching for another
+            movie.
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- <div class="flex justify-center items-center h-full loadingSection">

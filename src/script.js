@@ -69,9 +69,24 @@ function fetchingMovie() {
                     movieDetails.classList.remove('easeIn');
                     movieDetails.classList.add('ease-out', 'duration-1000');
                   });
-                } else {
+                } else if (
+                  data.backdrop_path == null
+                  || data.original_title == null
+                  || data.overview == null
+                ) {
+                  const mainContent = document.querySelector('.mainContent');
+                  const error = document.querySelector('.cards');
+                  error.classList.remove('-top-full');
+                  error.classList.add('errorPop-up');
+                  mainContent.style.opacity = '20%';
+                  mainContent.addEventListener('click', () => {
+                    error.classList.add('-top-full');
+                    error.classList.remove('errorPop-up');
+                    mainContent.style.opacity = '100%';
+                  });
                   return true;
                 }
+
                 return 0;
               });
           });
