@@ -663,12 +663,12 @@ video {
   gap: 0.75rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-5 {
   gap: 1.25rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .overflow-auto {
@@ -682,11 +682,6 @@ video {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-neutral-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 64 64 / var(--tw-bg-opacity));
 }
 
 .bg-red-400 {
@@ -735,17 +730,17 @@ video {
   padding-bottom: 1rem;
 }
 
-.pe-2 {
-  padding-inline-end: 0.5rem;
-}
-
 .pt-0 {
   padding-top: 0px;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.pe-2 {
+  padding-inline-end: 0.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -782,6 +777,10 @@ video {
   line-height: 1.25rem;
 }
 
+.leading-6 {
+  line-height: 1.5rem;
+}
+
 .leading-8 {
   line-height: 2rem;
 }
@@ -798,6 +797,11 @@ video {
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.text-red-300 {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
 }
 
 .text-red-400 {
@@ -879,7 +883,7 @@ li {
   font-feature-settings:
     'clig' off,
     'liga' off;
-  font-family: SF Pro Display;
+  font-family: Crete Round;
   font-size: 2vw;
   font-style: normal;
   font-weight: 700;
@@ -963,7 +967,7 @@ li {
 .movies,
 .topRated {
   /* Disable vertical scrolling */
-  overflow-y:-moz-hidden-unscrollable ;
+  overflow-y: -moz-hidden-unscrollable;
   overflow-x: scroll;
   /* height: fit-content; */
 }
@@ -974,7 +978,7 @@ li {
   font-feature-settings:
     'clig' off,
     'liga' off;
-  font-family: SF Pro Display;
+  font-family: Crete Round;
   font-size: 24.677px;
   font-style: normal;
   font-weight: 400;
@@ -1108,6 +1112,11 @@ li {
 
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .sm\:text-4xl {
