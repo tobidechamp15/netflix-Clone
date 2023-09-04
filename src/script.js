@@ -73,6 +73,15 @@ function fetchingMovie() {
                     movieDetails.classList.remove('easeIn');
                     movieDetails.classList.add('ease-out', 'duration-1000');
                   });
+                  const cancelDetail = document.querySelector('.cancelDetails');
+                  cancelDetail.addEventListener('click', () => {
+                    const mainContent = document.querySelector('.mainContent');
+                    const movieDetails = document.querySelector('.movieDetails');
+                    movieDetails.classList.add('-top-full');
+                    mainContent.style.opacity = '100%';
+                    movieDetails.classList.remove('easeIn');
+                    movieDetails.classList.add('ease-out', 'duration-1000');
+                  });
                 } else if (
                   data.backdrop_path == null
                   || data.original_title == null

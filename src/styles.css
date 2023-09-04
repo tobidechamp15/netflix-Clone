@@ -286,10 +286,13 @@ li {
 
   .easeIn {
     position: fixed;
-    top: 20%;
+    top: 0%;
+    height: 100%;
     z-index: 999;
     transition: 0.7s ease-in-out;
     overflow: auto;
+    align-items: center;
+    justify-content: center;
   }
 
   .posterImg {
