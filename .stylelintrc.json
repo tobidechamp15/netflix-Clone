@@ -39,6 +39,8 @@
     "**/reset*.css",
     "**/bootstrap*.css",
     "**/*.js",
-    "**/*.jsx"
+    "**/*.jsx",
+    "**/*.css",
+    "**/*.tar.gz."
   ]
 }
