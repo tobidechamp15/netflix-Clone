@@ -269,6 +269,7 @@ li {
 .scrollLeft,
 .scrollRight {
 }
+
 @media (max-width: 640px) {
   .home {
     background-image: url('/src/assets/home-Image.svg');
@@ -282,6 +283,7 @@ li {
     height: 100px !important;
     background: #000;
   }
+
   .easeIn {
     position: fixed;
     top: 20%;
@@ -294,6 +296,7 @@ li {
     max-width: 100% !important;
     height: 100% !important;
   }
+
   .scrollLeft,
   .scrollRight {
     width: 30px;
