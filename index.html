@@ -126,33 +126,21 @@
           <div class="menu-ham"></div>
         </section>
       </div>
-      <div class="flex flex-col justify-between mb-4 items- w-full h-auto">
-        <img
-          src="src/assets/home-Image.svg"
-          class="mainPoster" />
-        <section class="-mt-16 flex items-center justify-center gap-11 mb-3">
-          <div class="flex flex-col gap-2">
-            <img
-              src="/src/assets/addList.svg"
-              class="w-6 h-6" />
-            <span class="text-sm tracking-wide text-white">My List</span>
-          </div>
-          <div class="flex gap-5 bg-red-400 rounded p-4 py-2">
-            <img
-              src="/src/assets/playIcon.svg"
-              class="w-5" />
-            <span class="text-xl text-black leading-8 not-italic font-semibold"
-              >Play</span
-            >
-          </div>
-          <div class="flex flex-col gap-2">
-            <img
-              src="/src/assets/infoIcon.svg"
-              class="w-6 h-6" />
-            <span class="text-sm leading-5 font-normal tracking-wide"
-              >Info</span
-            >
-          </div>
+      <div class="flex flex-col mb-4 h-auto">
+        <div
+          class="mainPoster relative overflow-auto"
+          id="scrollContainer"></div>
+        <section
+          class="flex justify-between w-full absolute "
+          style="top: 20%">
+          <img
+            src="/src/assets/left-arrow.png"
+            class="cursor-pointer scrollLeft bg-gray-500 opacity-50 hover:opacity-100 duration-500  p-1 rounded-full" />
+          <img
+            src="/src/assets/right-arrow.png"
+            class="cursor-pointer scrollRight bg-gray-500 opacity-50 hover:opacity-100 duration-500 p-1 rounded-full" />
+        </section>
+        <section class="aboutMovie">
         </section>
       </div>
       <section class="flex flex-col gap-3">
@@ -174,7 +162,7 @@
           </span>
           <span class="cursor-pointer text-red-500">See All</span>
         </section>
-        <div class="topRated gap-3 py-2 movies p-5 flex flex-row"></div>
+        <div class="topRated gap-3 movies p-5 flex flex-row"></div>
       </section>
       <section>
         <section class="flex justify-between items-center p-3">
@@ -184,15 +172,26 @@
           </span>
           <span class="cursor-pointer text-red-500">See All</span>
         </section>
-        <div class="tvProviders gap-3 py-2 movies flex flex-row"></div>
+        <div class="tvProviders gap-3 py-7 movies flex flex-row"></div>
       </section>
       <div id="video-container"></div>
 
       <!-- The video will be embedded here -->
     </div>
-    <script src="/src/script.js"></script>
-    <script src="/src/topRated.js"></script>
-    <script src="/src/sidebar.js"></script>
-    <script src="/src/tvProviders.js"></script>
+    <script
+      src="/src/script.js"
+      async></script>
+    <script
+      src="/src/mainPoster.js"
+      async></script>
+    <script
+      src="/src/topRated.js"
+      async></script>
+    <script
+      src="/src/tvProviders.js"
+      async></script>
+    <script
+      src="/src/sidebar.js"
+      async></script>
   </body>
 </html>
