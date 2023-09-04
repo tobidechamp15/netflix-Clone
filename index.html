@@ -1,147 +1,198 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crete Round|Roboto|Open Sans|SF Pro Display"
+      rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/assets/LOGO.png" />
+    <title>Cinematrixmingle</title>
+    <link
+      rel="stylesheet"
+      href="/src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="/dist/output.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=Crete Round|Roboto|Open Sans|SF Pro Display" rel="stylesheet" />
-  <title>Netflix</title>
-  <link rel="stylesheet" href="/src/styles.css" />
-  <link rel="stylesheet" href="/dist/output.css" />
-</head>
+  <body class="pt-0 bg-black h-screen">
+    <div
+      id="sidebar"
+      class="p-3 flex flex-col gap-3">
+      <div class="flex items-center justify-center h-full">
+        <div class="flex flex-col">
+          <span class="sidebarList">All</span>
+          <span class="sidebarList">TV Shows</span>
+          <span class="sidebarList">Movies</span>
+          <span class="sidebarList">My List</span>
+        </div>
+      </div>
 
-<body class="pt-0 bg-black h-screen">
-  <div id="sidebar" class="p-3 flex flex-col gap-3">
-    <div class="flex items-center justify-center h-full">
-      <div class="flex flex-col">
-        <span class="sidebarList">All</span>
-        <span class="sidebarList">TV Shows</span>
-        <span class="sidebarList">Movies</span>
-        <span class="sidebarList">My List</span>
-      </div>
-    </div>
-
-    <section class="cancel m-3 flex items-center justify-center p-8">
-      <img src="/src/assets/cancelImg.svg" class="m-3 cancelBtn" />
-    </section>
-  </div>
-  <div class="movieDetails h w-screen bg-black flex flex-col fixed -top-full overflow-auto">
-    <!--       Movie Details -->
-    <img src="/src/assets/Title-Image.svg" class="selectedBackdrop" />
-    <section class="-mt-16 flex items-center justify-center gap-11 mb-3">
-      <div class="flex flex-col gap-2">
-        <img src="/src/assets/addList.svg" class="w-6 h-6" />
-        <span class="text-sm tracking-wide text-white">My List</span>
-      </div>
-      <div class="flex gap-5 bg-red-400 rounded p-4 py-2">
-        <img src="/src/assets/playIcon.svg" class="w-5" />
-        <span class="text-xl text-black leading-8 not-italic font-semibold">Play</span>
-      </div>
-      <div class="flex flex-col gap-2">
-        <img src="/src/assets/infoIcon.svg" class="w-6 h-6" />
-        <span class="text-sm leading-5 font-normal tracking-wide">Info</span>
-      </div>
-    </section>
-    <section class="flex flex-col gap-2 bg-red-950 rounded p-3">
-      <span class="sm:text-4xl text-xl text-red-400 titleContainer">Movie Name</span>
-      <ul class="genre flex gap-3 flex-wrap text-sm"></ul>
-      <span class="w-full mt-3 flex details font-bold text-gray-600">
-        A young man who is about to embark on his first adventure, finds
-        himself in the middle of an epic journey that will A young man who has
-        been living in the shadows of his father's business, is suddenly drawn
-        into an extraordinary ad A young man who has been living in the
-        shadows of his family for years, is suddenly reunited with his old
-        friend
-      </span>
-    </section>
-  </div>
-
-  <!-- Movie Error Details -->
-  <div class="flex w-full -top-full cards">
-    <div class="card">
-      <section class="img flex flex-col items-center justify-center">
-        <img src="/src/assets/exclamation.png" alt="" />
-        <span class="w-full mt-1 text-xl">Click here</span>
+      <section class="cancel m-3 flex items-center justify-center p-8">
+        <img
+          src="/src/assets/cancelImg.svg"
+          class="m-3 cancelBtn" />
       </section>
-      <div class="card__content">
-        <p class="card__title align-center flex">Error Message</p>
-        <p class="card__description">
-          We're sorry, but information about this movie is currently
-          unavailable. Please check back later or try searching for another
-          movie.
-        </p>
+    </div>
+    <div
+      class="movieDetails h w-screen bg-black flex flex-col fixed -top-full overflow-auto">
+      <!--       Movie Details -->
+      <img
+        src="/src/assets/Title-Image.svg"
+        class="selectedBackdrop" />
+      <section class="-mt-16 flex items-center justify-center gap-11 mb-3">
+        <div class="flex flex-col gap-2">
+          <img
+            src="/src/assets/addList.svg"
+            class="w-6 h-6" />
+          <span class="text-sm tracking-wide text-white">My List</span>
+        </div>
+        <div class="flex gap-5 bg-red-400 rounded p-4 py-2">
+          <img
+            src="/src/assets/playIcon.svg"
+            class="w-5" />
+          <span class="text-xl text-black leading-8 not-italic font-semibold"
+            >Play</span
+          >
+        </div>
+        <div class="flex flex-col gap-2">
+          <img
+            src="/src/assets/infoIcon.svg"
+            class="w-6 h-6" />
+          <span class="text-sm leading-5 font-normal tracking-wide">Info</span>
+        </div>
+      </section>
+      <section class="flex flex-col gap-2 bg-red-950 rounded p-3">
+        <span class="sm:text-4xl text-xl text-red-400 titleContainer"
+          >Movie Name</span
+        >
+        <ul class="genre flex gap-3 flex-wrap text-sm"></ul>
+        <span class="w-full mt-3 flex details font-bold text-gray-600">
+          A young man who is about to embark on his first adventure, finds
+          himself in the middle of an epic journey that will A young man who has
+          been living in the shadows of his father's business, is suddenly drawn
+          into an extraordinary ad A young man who has been living in the
+          shadows of his family for years, is suddenly reunited with his old
+          friend
+        </span>
+      </section>
+    </div>
+
+    <!-- Movie Error Details -->
+    <div class="flex w-full -top-full cards">
+      <div class="card">
+        <section class="img flex flex-col items-center justify-center">
+          <img
+            src="/src/assets/exclamation.png"
+            alt="" />
+          <span class="w-full mt-1 text-xl">Click here</span>
+        </section>
+        <div class="card__content">
+          <p class="card__title align-center flex">Error Message</p>
+          <p class="card__description">
+            We're sorry, but information about this movie is currently
+            unavailable. Please check back later or try searching for another
+            movie.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- <div class="flex justify-center items-center h-full loadingSection">
+    <!-- <div class="flex justify-center items-center h-full loadingSection">
         <img src="../src/assets/netflixLogo.svg">
     </div>  -->
-  <div class="mainContent px-0">
-    <div class="flex justify-between items-center w-full bg-black py-4 px-2">
-      <div class="flex gap-1 cursor-pointer">
-        <img src="/src/assets/LOGO.png" class="" />
-        <span class="text-xl text-red-300">Cinematrixmingle</span>
+    <div class="mainContent px-0">
+      <div class="flex justify-between items-center w-full bg-black py-4 px-2">
+        <div class="flex gap-1 cursor-pointer">
+          <img
+            src="/src/assets/LOGO.png"
+            class="" />
+          <span class="text-xl text-red-300">Cinematrixmingle</span>
+        </div>
+        <div class="hidden sm:flex justify-end pe-2 gap-4 flex-1">
+          <span class="text-sm cursor-pointer">Home</span>
+          <span class="text-sm cursor-pointer">Series</span>
+          <span class="text-sm cursor-pointer">Movies</span>
+          <span class="text-sm cursor-pointer">Pages</span>
+          <span class="text-sm cursor-pointer">Pricing</span>
+          <span class="text-sm cursor-pointer">Contact</span>
+        </div>
+        <section
+          class="flex sm:hidden gap-1 m-3 items-center cursor-pointer flex-col ham">
+          <div class="menu-ham"></div>
+          <div class="menu-ham"></div>
+          <div class="menu-ham"></div>
+        </section>
       </div>
-      <div class="hidden sm:flex justify-end pe-2 gap-4 flex-1">
-        <span class="text-sm cursor-pointer">Home</span>
-        <span class="text-sm cursor-pointer">Series</span>
-        <span class="text-sm cursor-pointer">Movies</span>
-        <span class="text-sm cursor-pointer">Pages</span>
-        <span class="text-sm cursor-pointer">Pricing</span>
-        <span class="text-sm cursor-pointer">Contact</span>
+      <div class="flex flex-col mb-4 h-auto">
+        <div
+          class="mainPoster relative overflow-hidden"
+          id="scrollContainer"></div>
+        <section class="flex justify-between w-full absolute styles">
+          <img
+            src="/src/assets/left-arrow.png"
+            class="cursor-pointer scrollLeft bg-gray-500 opacity-50 hover:opacity-100 duration-500 p-1 rounded-full" />
+          <img
+            src="/src/assets/right-arrow.png"
+            class="cursor-pointer scrollRight bg-gray-500 opacity-50 hover:opacity-100 duration-500 p-1 rounded-full" />
+        </section>
+        <section class="aboutMovie"></section>
       </div>
-      <section class="flex sm:hidden gap-1 m-3 items-center cursor-pointer flex-col ham">
-        <div class="menu-ham"></div>
-        <div class="menu-ham"></div>
-        <div class="menu-ham"></div>
+      <section class="flex flex-col gap-3">
+        <section class="flex justify-between items-center p-3">
+          <span
+            class="topic text-white sm:text-2xl text-lg tracking-wide font-semibold leading-6"
+            >TV Shows Trending Todays
+          </span>
+          <span class="cursor-pointer text-red-500">See All</span>
+        </section>
+        <!-- Movies Section -->
+        <div class="movies flex gap-2 items-center p-5 h-fit"></div>
       </section>
-    </div>
-    <div class="flex flex-col mb-4 h-auto">
-      <div class="mainPoster relative overflow-auto" id="scrollContainer"></div>
-      <section class="flex justify-between w-full absolute styles" >
-        <img src="/src/assets/left-arrow.png"
-          class="cursor-pointer scrollLeft bg-gray-500 opacity-50 hover:opacity-100 duration-500 p-1 rounded-full" />
-        <img src="/src/assets/right-arrow.png"
-          class="cursor-pointer scrollRight bg-gray-500 opacity-50 hover:opacity-100 duration-500 p-1 rounded-full" />
+      <section>
+        <section class="flex justify-between items-center p-3">
+          <span
+            class="topic text-white sm:text-2xl text-lg tracking-wide font-semibold leading-4"
+            >Top Rated
+          </span>
+          <span class="cursor-pointer text-red-500">See All</span>
+        </section>
+        <div class="topRated gap-3 movies p-5 flex flex-row"></div>
       </section>
-      <section class="aboutMovie"></section>
-    </div>
-    <section class="flex flex-col gap-3">
-      <section class="flex justify-between items-center p-3">
-        <span class="topic text-white sm:text-2xl text-lg tracking-wide font-semibold leading-6">TV Shows Trending
-          Todays
-        </span>
-        <span class="cursor-pointer text-red-500">See All</span>
+      <section>
+        <section class="flex justify-between items-center p-3">
+          <span
+            class="topic text-white sm:text-2xl text-lg tracking-wide font-semibold leading-4"
+            >TV Providers
+          </span>
+          <span class="cursor-pointer text-red-500">See All</span>
+        </section>
+        <div class="tvProviders gap-3 py-7 movies flex flex-row"></div>
       </section>
-      <!-- Movies Section -->
-      <div class="movies flex gap-2 items-center p-5 h-fit"></div>
-    </section>
-    <section>
-      <section class="flex justify-between items-center p-3">
-        <span class="topic text-white sm:text-2xl text-lg tracking-wide font-semibold leading-4">Top Rated
-        </span>
-        <span class="cursor-pointer text-red-500">See All</span>
-      </section>
-      <div class="topRated gap-3 movies p-5 flex flex-row"></div>
-    </section>
-    <section>
-      <section class="flex justify-between items-center p-3">
-        <span class="topic text-white sm:text-2xl text-lg tracking-wide font-semibold leading-4">TV Providers
-        </span>
-        <span class="cursor-pointer text-red-500">See All</span>
-      </section>
-      <div class="tvProviders gap-3 py-7 movies flex flex-row"></div>
-    </section>
-    <div id="video-container"></div>
+      <div id="video-container"></div>
 
-    <!-- The video will be embedded here -->
-  </div>
-  <script src="/src/script.js" async></script>
-  <script src="/src/mainPoster.js" async></script>
-  <script src="/src/topRated.js" async></script>
-  <script src="/src/tvProviders.js" async></script>
-  <script src="/src/sidebar.js" async></script>
-</body>
-
+      <!-- The video will be embedded here -->
+    </div>
+    <script
+      src="/src/script.js"
+      async></script>
+    <script
+      src="/src/mainPoster.js"
+      async></script>
+    <script
+      src="/src/topRated.js"
+      async></script>
+    <script
+      src="/src/tvProviders.js"
+      async></script>
+    <script
+      src="/src/sidebar.js"
+      async></script>
+  </body>
 </html>

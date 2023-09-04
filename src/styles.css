@@ -266,12 +266,10 @@ li {
   display: -webkit-inline-box;
 }
 
-.scrollLeft,
-.scrollRight {
-}
 .styles {
   top: 20%;
 }
+
 @media (max-width: 640px) {
   .home {
     background-image: url('/src/assets/home-Image.svg');
