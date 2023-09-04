@@ -18,7 +18,7 @@ Liveserver
 
 ## Live Demo
 
-[Live Demo](https://cinematrixmingle.netlify.app/)
+[Live Demo](https://main-cinematrixmingle.netlify.app/)
 
 ### Setup
 
