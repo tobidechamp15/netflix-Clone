@@ -18,7 +18,7 @@ Liveserver
 
 ## Live Demo
 
-[Live Demo](https://citycheckcweather.netlify.app/)
+[Live Demo](https://cinematrixmingle.netlify.app/)
 
 ### Setup
 
