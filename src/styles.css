@@ -43,7 +43,7 @@ li {
 }
 
 .nav-items:hover {
-  color: rgb(160, 47, 47);
+  color: #a02f2f;
   transition: 0.75s;
   font-size: 2.3vw;
 }
@@ -70,26 +70,6 @@ li {
   width: 25px;
   height: 05px;
   background-color: white;
-}
-
-@media (max-width: 640px) {
-  .home {
-    background-image: url('/src/assets/home-Image.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .imageContainer {
-    max-width: 150px !important;
-    height: 100px !important;
-    background: #000;
-  }
-
-  .posterImg {
-    max-width: 100% !important;
-    height: 100% !important;
-  }
 }
 
 .imageContainer {
@@ -120,6 +100,7 @@ li {
 .selectedBackdrop {
   width: 100%;
   max-height: 450px;
+  z-index: 99;
 }
 
 #sidebar {
@@ -179,11 +160,12 @@ li {
 
 .tvProvider {
   max-width: 297px !important;
+  border-radius: 10px;
 }
 
 .tvProvider:hover {
   transform: scale(1.5);
-  border-radius: 30px;
+  border-radius: 10px;
   transition: 0.75s;
 }
 
@@ -278,4 +260,47 @@ li {
   top: 25vh;
   z-index: 999;
   position: fixed;
+}
+
+.mainPoster {
+  display: -webkit-inline-box;
+}
+
+.scrollLeft,
+.scrollRight {
+}
+.styles {
+  top: 20%;
+}
+@media (max-width: 640px) {
+  .home {
+    background-image: url('/src/assets/home-Image.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .imageContainer {
+    max-width: 150px !important;
+    height: 100px !important;
+    background: #000;
+  }
+
+  .easeIn {
+    position: fixed;
+    top: 20%;
+    z-index: 999;
+    transition: 0.7s ease-in-out;
+    overflow: auto;
+  }
+
+  .posterImg {
+    max-width: 100% !important;
+    height: 100% !important;
+  }
+
+  .scrollLeft,
+  .scrollRight {
+    width: 30px;
+  }
 }
