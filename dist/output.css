@@ -717,6 +717,10 @@ video {
   overflow: auto;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1159,8 +1163,8 @@ li {
   display: -webkit-inline-box;
 }
 
-.scrollLeft,
-.scrollRight {
+.styles {
+  top: 20%;
 }
 
 @media (max-width: 640px) {
