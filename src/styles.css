@@ -304,3 +304,13 @@ li {
     width: 30px;
   }
 }
+
+@media (min-width: 1000px) {
+  .mainPoster {
+    align-self: center;
+    width: 50%;
+  }
+  .eachPoster {
+    width: 100%;
+  }
+}

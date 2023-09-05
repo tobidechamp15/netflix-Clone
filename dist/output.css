@@ -1163,6 +1163,10 @@ li {
 .scrollRight {
 }
 
+.styles {
+  top: 20%;
+}
+
 @media (max-width: 640px) {
   .home {
     background-image: url('/src/assets/home-Image.svg');
@@ -1193,6 +1197,17 @@ li {
   .scrollLeft,
   .scrollRight {
     width: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .mainPoster {
+    align-self: center;
+    width: 50%;
+  }
+
+  .eachPoster {
+    width: 100%;
   }
 }
 
