@@ -1,13 +1,13 @@
 const options = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    accept: 'application/json',
+    accept: "application/json",
     Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NmRmNDlkOWFmMWJjMTFmYWI4MDE0MGVhODM0N2IyMCIsInN1YiI6IjY0ZWE1MDdjNTI1OGFlMDE0ZGYyZDEyYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.iW2S4RopStbFn_abwAoapxsTQlMH-4nHDzpACiSRfRQ',
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3NmRmNDlkOWFmMWJjMTFmYWI4MDE0MGVhODM0N2IyMCIsInN1YiI6IjY0ZWE1MDdjNTI1OGFlMDE0ZGYyZDEyYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.iW2S4RopStbFn_abwAoapxsTQlMH-4nHDzpACiSRfRQ",
   },
 };
 function fetchingMovie() {
-  fetch('https://api.themoviedb.org/3/trending/all/day?language=en-US', options)
+  fetch("https://api.themoviedb.org/3/trending/all/day?language=en-US", options)
     .then((response) => response.json())
     .then((data) => {
       const datum = data.results;
@@ -17,20 +17,20 @@ function fetchingMovie() {
         const eachMovieId = item.id;
 
         arrayOfId.push(eachMovieId);
-
+        var liked = true;
         const poster = item.poster_path;
         const fullPosterUrl = `https://image.tmdb.org/t/p/original/${poster}`;
         const movie = `<li class="flex flex-col  li">
-          <section  class="imageContainer ">
+          <section  class="imageContainer " style="position: relative;">
             <img id=${eachMovieId}  class="posterImg"  src="${fullPosterUrl}">
+            ${liked ? `<button onclick="likeMovie(${item.id})" style="position: absolute; top:90%; left:90%;"> <img src="src/assets/icons8-like-50.png"></button>` : `<button>Not Liked</button>`}
           </section>
-          
-        </li>`;
-        document.querySelector('.movies').innerHTML += movie;
+          </li>`;
+        document.querySelector(".movies").innerHTML += movie;
 
-        const posterImages = document.querySelectorAll('.posterImg');
+        const posterImages = document.querySelectorAll(".posterImg");
         posterImages.forEach((posterImg) => {
-          posterImg.addEventListener('click', () => {
+          posterImg.addEventListener("click", () => {
             const movieId = posterImg.id;
 
             // Fetch and display video content based on movieId
@@ -41,61 +41,64 @@ function fetchingMovie() {
                 if (data.backdrop_path !== null) {
                   const backDropImagePath = data.backdrop_path;
                   const backDropImageUrl = `https://image.tmdb.org/t/p/original/${backDropImagePath}`;
-                  const backDropImage = document.querySelector('.selectedBackdrop');
+                  const backDropImage =
+                    document.querySelector(".selectedBackdrop");
                   backDropImage.src = backDropImageUrl;
                   const selectedTitle = data.original_title;
-                  const titleContainer = document.querySelector('.titleContainer');
+                  const titleContainer =
+                    document.querySelector(".titleContainer");
                   titleContainer.textContent = selectedTitle;
                   const overviewContent = data.overview;
-                  const details = document.querySelector('.details');
+                  const details = document.querySelector(".details");
                   details.textContent = overviewContent;
 
                   const genreArray = data.genres;
 
                   genreArray.forEach((item) => {
-                    const genreList = document.createElement('li');
+                    const genreList = document.createElement("li");
                     genreList.textContent = `${item.name}  |`;
-                    const genres = document.querySelector('.genre');
+                    const genres = document.querySelector(".genre");
                     genres.append(genreList);
                   });
 
                   // const movieDetails = document.querySelector('.movieDetails');
                   // movieDetails.append(backDropImage);
 
-                  const mainContent = document.querySelector('.mainContent');
-                  const movieDetails = document.querySelector('.movieDetails');
-                  movieDetails.classList.remove('-top-full');
-                  movieDetails.classList.add('easeIn');
-                  mainContent.style.opacity = '20%';
-                  mainContent.addEventListener('click', () => {
-                    movieDetails.classList.add('-top-full');
-                    mainContent.style.opacity = '100%';
-                    movieDetails.classList.remove('easeIn');
-                    movieDetails.classList.add('ease-out', 'duration-1000');
+                  const mainContent = document.querySelector(".mainContent");
+                  const movieDetails = document.querySelector(".movieDetails");
+                  movieDetails.classList.remove("-top-full");
+                  movieDetails.classList.add("easeIn");
+                  mainContent.style.opacity = "20%";
+                  mainContent.addEventListener("click", () => {
+                    movieDetails.classList.add("-top-full");
+                    mainContent.style.opacity = "100%";
+                    movieDetails.classList.remove("easeIn");
+                    movieDetails.classList.add("ease-out", "duration-1000");
                   });
-                  const cancelDetail = document.querySelector('.cancelDetails');
-                  cancelDetail.addEventListener('click', () => {
-                    const mainContent = document.querySelector('.mainContent');
-                    const movieDetails = document.querySelector('.movieDetails');
-                    movieDetails.classList.add('-top-full');
-                    mainContent.style.opacity = '100%';
-                    movieDetails.classList.remove('easeIn');
-                    movieDetails.classList.add('ease-out', 'duration-1000');
+                  const cancelDetail = document.querySelector(".cancelDetails");
+                  cancelDetail.addEventListener("click", () => {
+                    const mainContent = document.querySelector(".mainContent");
+                    const movieDetails =
+                      document.querySelector(".movieDetails");
+                    movieDetails.classList.add("-top-full");
+                    mainContent.style.opacity = "100%";
+                    movieDetails.classList.remove("easeIn");
+                    movieDetails.classList.add("ease-out", "duration-1000");
                   });
                 } else if (
-                  data.backdrop_path == null
-                  || data.original_title == null
-                  || data.overview == null
+                  data.backdrop_path == null ||
+                  data.original_title == null ||
+                  data.overview == null
                 ) {
-                  const mainContent = document.querySelector('.mainContent');
-                  const error = document.querySelector('.cards');
-                  error.classList.remove('-top-full');
-                  error.classList.add('errorPop-up');
-                  mainContent.style.opacity = '20%';
-                  mainContent.addEventListener('click', () => {
-                    error.classList.add('-top-full');
-                    error.classList.remove('errorPop-up');
-                    mainContent.style.opacity = '100%';
+                  const mainContent = document.querySelector(".mainContent");
+                  const error = document.querySelector(".cards");
+                  error.classList.remove("-top-full");
+                  error.classList.add("errorPop-up");
+                  mainContent.style.opacity = "20%";
+                  mainContent.addEventListener("click", () => {
+                    error.classList.add("-top-full");
+                    error.classList.remove("errorPop-up");
+                    mainContent.style.opacity = "100%";
                   });
                   return true;
                 }
@@ -111,3 +114,9 @@ function fetchingMovie() {
     });
 }
 fetchingMovie();
+
+function likeMovie(id) {
+  console.log(id);
+  const likedMovies = localStorage.getItem("likedMovies") || [];
+}
+// Add buttton to 

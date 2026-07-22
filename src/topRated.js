@@ -14,8 +14,8 @@ fetch(
   .then((data) => {
     const datum = data.results;
     datum.map((item) => {
-      const poster = item.poster_path;
-      const fullPosterUrl = `https://image.tmdb.org/t/p/original/${poster}`;
+      // const poster = item.poster_path;
+      const fullPosterUrl = `https://image.tmdb.org/t/p/original/${item.poster_path}`;
       const topRated = `<li class="flex flex-col gap-3 "><section class="imageContainer"><img class="posterImg" src="${fullPosterUrl}"></section></li>`;
       document.querySelector('.topRated').innerHTML += topRated;
       return true;
