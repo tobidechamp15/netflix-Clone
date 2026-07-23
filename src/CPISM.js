@@ -85,6 +85,7 @@ async function fetchMovies() {
         button.textContent === "Like"
           ? (button.textContent = "Unlike")
           : (button.textContent = "Like");
+          console.log("Button is clicking")
       };
       // console.log(img);
       const imgUnlike = document.createElement("img");

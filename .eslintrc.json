@@ -12,23 +12,36 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "extends": [
-    "airbnb-base"
-  ],
+  "extends": ["airbnb-base"],
   "rules": {
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
+    "no-var": "off",
+    "no-console": "off",
+    "no-alert": "off",
+    "no-unused-vars": "off",
+    "no-unused-expressions": "off",
+    "no-trailing-spaces": "off",
+    "quotes": "off",
+    "semi": "off",
+    "indent": "off",
+    "operator-linebreak": "off",
+    "prefer-template": "off",
+    "prefer-arrow-callback": "off",
+    "func-names": "off",
+    "array-callback-return": "off",
+    "spaced-comment": "off",
+    "comma-spacing": "off",
+    "space-before-function-paren": "off",
+    "vars-on-top": "off",
     "import/extensions": [
-      1,
+      "error",
       {
         "js": "always",
         "json": "always"
       }
     ]
   },
-  "ignorePatterns": [
-    "dist/",
-    "build/"
-  ]
+  "ignorePatterns": ["dist/", "build/"]
 }
